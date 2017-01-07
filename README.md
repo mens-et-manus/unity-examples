@@ -27,30 +27,9 @@ in `Edit → Project Settings → Editor`:
 Then Save Scene and Project. These settings will make multi-user merging manageable.
     
 ### Setup: Once per Repository
-You can either clone this repo, or do the following setup.
-
-#### .gitignore
-If you create from github.com and choose Unity it autogenerates a [.gitignore file](https://github.com/github/gitignore/blob/master/Unity.gitignore), but I changed all Unity folders to be relative paths:
-
-    **/[Ll]ibrary/
-    **/[Tt]emp/
-    **/[Oo]bj/
-    **/[Bb]uild/
-    **/[Bb]uilds/
-    **/Assets/AssetStoreTools*
-    
-Or just copy this repos .gitignore file to your repo.
-
-#### git Large Files (git-lfs)
-The following `git lfs` commands generate lines in .gitattributes. Or just copy this repo's `.gitattributes` file to your repo
-
-    git lfs track "**/Assets/LargeFiles/**/*"
-    git lfs track "*.psd"
-    git lfs track "*.mp3"
-    git lfs track "*.wav"
-    git lfs track "*.prefab"
-    git lfs track "*.fbx"
-    git lfs track "*.xcf"      
+You can either clone this repo, or do the following setup:
+ * Copy the .gitignore file from this repo to yours
+ * Copy the .gitattributes file from this repo to yours 
 
 #### Unity git / merging (SmartMerge)
 Optional. You should add to your `.git/config` file the following to have smarter merging using Unity's merge tool, OS-X example below:
