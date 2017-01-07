@@ -2,7 +2,7 @@
 Unity examples
 
 ## Unity + Git
-Once we have setup git and lfs we should place all large files in the Assets/BigFiles subdirectory. That way they will all be automatically added to git-lfs.
+Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
  
 ### Setup: Once per computer
    
@@ -27,7 +27,7 @@ If you create from github.com and choose Unity it autogenerates a [.gitignore fi
 
 The following `git lfs` commands generate lines in .gitattributes
 
-    git lfs track "**/Assets/BigFiles/**/*"
+    git lfs track "**/Assets/LargeFiles/**/*"
     git lfs track "*.psd"
     git lfs track "*.mp3"
     git lfs track "*.wav"
