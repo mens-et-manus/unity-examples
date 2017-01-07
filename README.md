@@ -1,21 +1,28 @@
 # unity-examples
 Unity examples
 
-## Unity + Git
+## Setup Unity with Git Version Control
 Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
  
-### Setup: Once per computer
+### Setup: Once per Computer
    
     brew install git-lfs
     git lfs install
     git lfs install --system
 
 ### Setup: Once per Project
+In your Unity project, verify:
 
+in `Edit → Project Settings → Editor`:
+ * Change Version Control Mode to `Visible Meta Files`
+ * Change Asset Serialization Mode to `Force Text`
+ 
+Then Save Scene and Project. These settings will make multi-user merging manageable.
     
 ### Setup: Once per Repository
 You can either clone this repo, or do the following setup.
 
+#### .gitignore
 If you create from github.com and choose Unity it autogenerates a [.gitignore file](https://github.com/github/gitignore/blob/master/Unity.gitignore), but I changed all Unity folders to be relative paths:
 
     **/[Ll]ibrary/
@@ -25,6 +32,7 @@ If you create from github.com and choose Unity it autogenerates a [.gitignore fi
     **/[Bb]uilds/
     **/Assets/AssetStoreTools*
 
+#### git Large Files (git-lfs)
 The following `git lfs` commands generate lines in .gitattributes
 
     git lfs track "**/Assets/LargeFiles/**/*"
@@ -35,19 +43,20 @@ The following `git lfs` commands generate lines in .gitattributes
     git lfs track "*.fbx"
     git lfs track "*.xcf"      
 
-Optional, you should add to your .git/config file the following to have smarter merging using Unity's merge tool
+#### Unity git / merging
+Optional. You should add to your .git/config file the following to have smarter merging using Unity's merge tool, OS-X example below:
 
-[merge]
-	tool = unityyamlmerge
+    [merge]
+    	tool = unityyamlmerge
 
-[mergetool "unityyamlmerge"]
-	trustExitCode = false
-	cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+    [mergetool "unityyamlmerge"]
+    	trustExitCode = false
+    	cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
   
 You will need to update cmd to point to the correct location for your OS. Usually `/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge` on Mac and `C:\Program Files (x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe` on Windows. More info at [SmartMerge](https://docs.unity3d.com/Manual/SmartMerge.html)
   
 ### References
+   * [Setting Up Github (and Git LFS) for Unity projects](http://en.joysword.com/posts/2016/03/setting_up_github_for_unity_projects/)
    * [git file matching](https://github.com/git-lfs/git-lfs/issues/986)
-   * <http://en.joysword.com/posts/2016/03/setting_up_github_for_unity_projects/>
    * <http://stackoverflow.com/questions/36109307/use-unity-with-git-lfs>
    * <https://github.com/git-lfs/git-lfs/issues/282>
