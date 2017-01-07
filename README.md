@@ -3,6 +3,10 @@ Unity examples
 
 ## Setup Unity with Git Version Control
 Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
+
+If you are using `Git Desktop`, and you have cloned this repository, then there is no additional setup you need to do. Although you could do the optional `SmartMerge` setup if you are actually doing a lot of collaboration.
+
+If you are setting up command-line support, or setting up a new repository from scratch, ir setting up a new Unity Project, follow the appropriate instructions below:
  
 ### Setup: Once per Computer
    
@@ -10,7 +14,7 @@ Once we have setup git and lfs we should place all large files in the Assets/Lar
     git lfs install
     git lfs install --system
 
-### Setup: Once per Project
+### Setup: Once per Unity Project
 In your Unity project, verify:
 
 in `Edit → Project Settings → Editor`:
@@ -31,9 +35,11 @@ If you create from github.com and choose Unity it autogenerates a [.gitignore fi
     **/[Bb]uild/
     **/[Bb]uilds/
     **/Assets/AssetStoreTools*
+    
+Or just copy this repos .gitignore file to your repo.
 
 #### git Large Files (git-lfs)
-The following `git lfs` commands generate lines in .gitattributes
+The following `git lfs` commands generate lines in .gitattributes. Or just copy this repo's `.gitattributes` file to your repo
 
     git lfs track "**/Assets/LargeFiles/**/*"
     git lfs track "*.psd"
@@ -43,8 +49,8 @@ The following `git lfs` commands generate lines in .gitattributes
     git lfs track "*.fbx"
     git lfs track "*.xcf"      
 
-#### Unity git / merging
-Optional. You should add to your .git/config file the following to have smarter merging using Unity's merge tool, OS-X example below:
+#### Unity git / merging (SmartMerge)
+Optional. You should add to your `.git/config` file the following to have smarter merging using Unity's merge tool, OS-X example below:
 
     [merge]
     	tool = unityyamlmerge
