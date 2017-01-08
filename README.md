@@ -29,9 +29,9 @@ You can either clone this repo, or do the following:
 
  * Copy the .gitignore file from this repo to yours
  * Copy the .gitattributes file from this repo to yours 
-
+ 
 #### SmartMerge (Optional)
-In order to make merging of Unity files easier, Unity provides a tool called SmartMerge. Since the path the SmartMerge is OS dependent you need to add configuration to your `.git/config` file in your repo, which is specific to your computer. My OS-X example below:
+In order to make merging of Unity files easier, Unity provides a tool called SmartMerge. Since the path to the SmartMerge tool is OS dependent you need to add configuration to your `.git/config` file. That is your computer's repo specific config file. I appended the following to my config file (on OS-X):
 
     [merge]
     	tool = unityyamlmerge
@@ -40,7 +40,7 @@ In order to make merging of Unity files easier, Unity provides a tool called Sma
     	trustExitCode = false
     	cmd = '/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
   
-You will need to update cmd to point to the correct location for your OS. Usually `/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge` on Mac and `C:\Program Files (x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe` on Windows. More info at [SmartMerge](https://docs.unity3d.com/Manual/SmartMerge.html)
+You will need to update cmd to point to the correct location for your OS. Usually `/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge` on Mac and `C:\Program Files (x86)\Unity\Editor\Data\Tools\UnityYAMLMerge.exe` on Windows. More info at [SmartMerge](https://docs.unity3d.com/Manual/SmartMerge.html).
   
 ### References
    * [Setting Up Github (and Git LFS) for Unity projects](http://en.joysword.com/posts/2016/03/setting_up_github_for_unity_projects/)
