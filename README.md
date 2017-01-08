@@ -1,13 +1,13 @@
 # unity-examples
-Unity examples
+Setup Unity with Git Version Control
 
-## Setup Unity with Git Version Control
+## Summary
 Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
 
 If you are using `Git Desktop`, and you have cloned this repository, then there is no additional setup you need to do. Although you could do the optional `SmartMerge` setup if you are actually doing a lot of collaboration.
 
 If you are setting up command-line support, or setting up a new repository from scratch, or setting up a new Unity Project, follow the appropriate instructions below:
- 
+
 ### Setup: Once per Computer
 This is for command-line support only. If you are using Github Desktop git-lfs is already installed. Instructions below assume OS-X and brew, for other OS see [git-lfs](https://git-lfs.github.com/)   
    
