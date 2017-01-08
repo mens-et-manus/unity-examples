@@ -9,6 +9,7 @@ If you are using `Git Desktop`, and you have cloned this repository, then there 
 If you are setting up command-line support, or setting up a new repository from scratch, or setting up a new Unity Project, follow the appropriate instructions below:
  
 ### Setup: Once per Computer
+This is for command-line support only. If you are using Github Desktop git-lfs is already installed. Instructions below assume OS-X and brew, for other OS see [git-lfs](https://git-lfs.github.com/)   
    
     brew install git-lfs
     git lfs install
@@ -24,12 +25,13 @@ in `Edit → Project Settings → Editor`:
 Then Save Scene and Project. These settings will make multi-user merging manageable.
     
 ### Setup: Once per Repository
-You can either clone this repo, or do the following setup:
+You can either clone this repo, or do the following:
+
  * Copy the .gitignore file from this repo to yours
  * Copy the .gitattributes file from this repo to yours 
 
-#### Unity git / merging (SmartMerge)
-Optional. You should add to your `.git/config` file the following to have smarter merging using Unity's merge tool, OS-X example below:
+#### SmartMerge (Optional)
+In order to make merging of Unity files easier, Unity provides a tool called SmartMerge. Since the path the SmartMerge is OS dependent you need to add configuration to your `.git/config` file in your repo, which is specific to your computer. My OS-X example below:
 
     [merge]
     	tool = unityyamlmerge
