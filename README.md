@@ -1,9 +1,6 @@
 # unity-examples
 Unity examples
 
-## Unity Commands
- * option-drag to move camera
-
 ## Setup Unity with Git Version Control
 Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
 
