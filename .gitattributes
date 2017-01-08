@@ -1,5 +1,6 @@
 ## adapted from https://gist.github.com/tinjaw/5a0980ffdea307834c5f2af7c69fd9a2
 ## and https://gist.github.com/nemotoo/b8a1c3a0f1225bb9231979f389fd4f3f
+## and https://gist.github.com/Ikalou/197c414d62f45a1193fd
 
 ## Unity ##
 
@@ -16,6 +17,11 @@
 *.asset merge=unityyamlmerge eol=lf
 *.meta merge=unityyamlmerge eol=lf
 *.controller merge=unityyamlmerge eol=lf
+
+*.unity binary
+*.prefab binary
+*.asset binary
+
 
 ## git-lfs ##
 
