@@ -1,6 +1,8 @@
 # unity-examples
 Setup Unity with Git Version Control
 
+Heatsink Rewrite is a Kinect project, and roll-a-ball-kinect is the example shown in class
+
 ## Summary
 Once we have setup git and lfs we should place all large files in the Assets/LargeFiles subdirectory. That way they will all be automatically added to git-lfs.
 
